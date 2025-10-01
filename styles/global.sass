@@ -77,13 +77,6 @@ nav.main-navigation
 .parallax-section
   position: relative
   height: 100vh
-  display: flex
-  align-items: center
-  justify-content: center
-  color: white
-  font-size: 2rem
-
-  // this makes it overlap previous one
   position: sticky
   top: 0
 
@@ -118,7 +111,6 @@ nav.main-navigation
     z-index: 3
 
 .section2 
-  position: relative
   background: $cWhite
   padding: 100px 0
   @extend .parallax-section
@@ -145,7 +137,6 @@ nav.main-navigation
     color: $cBlack
 
 .section3
-  position: relative
   padding: 100px 0
   background: url('../img/bg-section2.png') center center / cover no-repeat
   width: 100%
@@ -221,6 +212,213 @@ nav.main-navigation
     font-size: 22px
     line-height: 160%
     color: $cWhite
+    margin-bottom: 40px
+
+  .cards-list 
+    width: 100%
+    max-width: 920px
+    margin: 0 auto
+    display: grid 
+    grid-template-columns: repeat(3, 1fr)
+    gap: 25px
+
+    .card 
+      background: #141414
+      border-radius: 15px
+      height: 230px
+      width: 100%
+      padding: 40px 0
+      cursor: pointer
+      transition: all 0.3s ease
+
+      .card-title
+        font-weight: 500
+        margin-bottom: 20px
+        transition: all 0.3s ease
+
+      img 
+        width: 90px
+        height: 90px
+        margin: 0 auto
+        display: block
+
+      &:hover
+        img 
+          height: 0
+          opacity: 0
+
+        .service-list
+          opacity: 1
+          height: auto
+
+    .service-list
+      opacity: 0
+      height: 0
+      font-size: 18px
+      margin: 0 auto
+      display: flex 
+      flex-direction: column
+      align-items: center
+      justify-content: center
+
+      li 
+        margin-bottom: 5px
+        transition: all 0.3s ease
+
+        &:hover
+          font-size: 22px
+
+    .brand
+      &:hover
+        background: #411c33
+
+        .card-title
+          color: #f90099
+
+    .digital
+      &:hover
+        background: #5a2310
+
+        .card-title
+          color: #ff6200
+
+    .print
+      &:hover
+        background: #3c4a29
+
+        .card-title
+          color: #8dc63f
+
+.section-6
+  background: #ff4b1e
+  width: 100%
+  padding: 100px 0
+
+  svg 
+    transform: rotate(-8deg)
+
+  .play-button
+    cursor: pointer
+
+    text
+      font-weight: 700
+      font-family: inherit
+      padding-right: 20px
+
+    path
+      stroke-dasharray: 320
+      stroke-dashoffset: 320
+      animation: draw 4s ease-in-out infinite
+
+  @keyframes draw
+    0%
+      stroke-dashoffset: 320
+    70%
+      stroke-dashoffset: 0
+    100%
+      stroke-dashoffset: 0
+
+  .container
+    width: 100%
+    max-width: 1160px
+    display: grid
+    grid-template-columns: 130px 1fr
+    align-items: center
+
+  .info-panel 
+    text-align: center
+
+    .info-img 
+      margin-bottom: 30px
+      height: 500px
+      object-fit: fixed
+
+.latest-news 
+  background: $cWhite
+  padding: 200px 0
+
+  .news-title
+    width: 100%
+    max-width: 1180px
+    display: flex 
+    justify-content: space-between
+    align-items: center
+    margin: 0 auto 30px
+    padding: 0 20px
+
+  .siema-content
+    padding: 0 15px
+
+  .siema-item 
+    background: green
+    height: 100px
+
+  h3
+    font-weight: 600
+    margin-bottom: 0
+
+  .carousel-buttons
+    display: flex 
+    gap: 20px
+    align-items: center
+
+    button 
+      background: none
+      outline: none
+      border: none
+      cursor: pointer
+
+    img
+      height: 30px
+      width: 30px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // next

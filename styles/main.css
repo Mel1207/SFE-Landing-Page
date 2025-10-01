@@ -87,11 +87,6 @@ nav.main-navigation .btn {
 .parallax-section, .section4, .section3, .section2, .hero {
   position: relative;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 2rem;
   position: sticky;
   top: 0;
 }
@@ -127,7 +122,6 @@ nav.main-navigation .btn {
 }
 
 .section2 {
-  position: relative;
   background: #fff;
   padding: 100px 0;
   z-index: 2;
@@ -154,7 +148,6 @@ nav.main-navigation .btn {
 }
 
 .section3 {
-  position: relative;
   padding: 100px 0;
   background: url("../img/bg-section2.png") center center/cover no-repeat;
   width: 100%;
@@ -228,6 +221,166 @@ nav.main-navigation .btn {
   font-size: 22px;
   line-height: 160%;
   color: #fff;
+  margin-bottom: 40px;
+}
+.section-5 .cards-list {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.section-5 .cards-list .card {
+  background: #141414;
+  border-radius: 15px;
+  height: 230px;
+  width: 100%;
+  padding: 40px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.section-5 .cards-list .card .card-title {
+  font-weight: 500;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+.section-5 .cards-list .card img {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  display: block;
+}
+.section-5 .cards-list .card:hover img {
+  height: 0;
+  opacity: 0;
+}
+.section-5 .cards-list .card:hover .service-list {
+  opacity: 1;
+  height: auto;
+}
+.section-5 .cards-list .service-list {
+  opacity: 0;
+  height: 0;
+  font-size: 18px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.section-5 .cards-list .service-list li {
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+.section-5 .cards-list .service-list li:hover {
+  font-size: 22px;
+}
+.section-5 .cards-list .brand:hover {
+  background: #411c33;
+}
+.section-5 .cards-list .brand:hover .card-title {
+  color: #f90099;
+}
+.section-5 .cards-list .digital:hover {
+  background: #5a2310;
+}
+.section-5 .cards-list .digital:hover .card-title {
+  color: #ff6200;
+}
+.section-5 .cards-list .print:hover {
+  background: #3c4a29;
+}
+.section-5 .cards-list .print:hover .card-title {
+  color: #8dc63f;
+}
+
+.section-6 {
+  background: #ff4b1e;
+  width: 100%;
+  padding: 100px 0;
+}
+.section-6 svg {
+  transform: rotate(-8deg);
+}
+.section-6 .play-button {
+  cursor: pointer;
+}
+.section-6 .play-button text {
+  font-weight: 700;
+  font-family: inherit;
+  padding-right: 20px;
+}
+.section-6 .play-button path {
+  stroke-dasharray: 320;
+  stroke-dashoffset: 320;
+  animation: draw 4s ease-in-out infinite;
+}
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 320;
+  }
+  70% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+.section-6 .container {
+  width: 100%;
+  max-width: 1160px;
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  align-items: center;
+}
+.section-6 .info-panel {
+  text-align: center;
+}
+.section-6 .info-panel .info-img {
+  margin-bottom: 30px;
+  height: 500px;
+  object-fit: fixed;
+}
+
+.latest-news {
+  background: #fff;
+  padding: 200px 0;
+}
+.latest-news .news-title {
+  width: 100%;
+  max-width: 1180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+}
+.latest-news .siema-content {
+  padding: 0 15px;
+}
+.latest-news .siema-item {
+  background: green;
+  height: 100px;
+}
+.latest-news h3 {
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.latest-news .carousel-buttons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.latest-news .carousel-buttons button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.latest-news .carousel-buttons img {
+  height: 30px;
+  width: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */
