@@ -1,0 +1,86 @@
+// RESET
+*, html
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+  font-family: sans-serif
+  overflow-x: hidden
+  line-height: 1.6
+
+// NAVIGATION (always on top)
+nav.main-navigation
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 20px 40px
+  background: transparent // can make solid if you want readability
+  z-index: 9999
+
+  .logo
+    font-weight: bold
+    color: white
+    text-decoration: none
+
+  .nav-links
+    list-style: none
+    display: flex
+    gap: 20px
+
+    .nav-link, .btn
+      color: white
+      text-decoration: none
+      font-weight: 500
+
+// SHARED STYLE FOR PARALLAX SECTIONS
+// Shared sticky sections
+.parallax-section
+  position: sticky
+  top: 0
+  height: 100vh
+  display: flex
+  align-items: center
+  justify-content: center
+  color: white
+  font-size: 2rem
+  padding: 40px
+
+.hero
+  @extend .parallax-section
+  background: url('../img/bg-hero.png') center / cover no-repeat
+  z-index: 1
+
+.section2
+  @extend .parallax-section
+  background: #222
+  z-index: 2
+
+.section3
+  @extend .parallax-section
+  background: #444
+  z-index: 3
+
+// Last parallax section scrolls away
+.section4
+  height: 100vh
+  display: flex
+  align-items: center
+  justify-content: center
+  background: #666
+  color: white
+  font-size: 2rem
+  z-index: 4
+
+// Normal scroll section
+.section5
+  position: relative
+  background: #f5f5f5
+  color: #222
+  padding: 100px 20px
+  min-height: 100vh
+  z-index: 4

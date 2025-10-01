@@ -17,7 +17,7 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
-.main-navigation {
+nav.main-navigation {
   background: rgba(0, 0, 0, 0.3137254902);
   padding: 15px 25px;
   border-radius: 100px;
@@ -33,17 +33,17 @@ body {
   transform: translateX(-50%);
   z-index: 100;
 }
-.main-navigation .logo {
+nav.main-navigation .logo {
   font-size: 28px;
   color: #fff;
   font-weight: 700;
 }
-.main-navigation .nav-links {
+nav.main-navigation .nav-links {
   display: flex;
   height: auto;
   overflow: hidden;
 }
-.main-navigation .nav-links .nav-link {
+nav.main-navigation .nav-links .nav-link {
   padding: 4px 12px;
   border-radius: 50px;
   color: #fff;
@@ -53,7 +53,7 @@ body {
   background: none;
   display: block;
 }
-.main-navigation .nav-links .nav-link::before {
+nav.main-navigation .nav-links .nav-link::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -65,14 +65,14 @@ body {
   border-radius: 50px;
   transform: translate3d(0, 100%, 0);
 }
-.main-navigation .nav-links .nav-link:hover::before {
+nav.main-navigation .nav-links .nav-link:hover::before {
   height: 100%;
   transform: translate3d(0, 0, 0);
 }
-.main-navigation .nav-links .nav-link span {
+nav.main-navigation .nav-links .nav-link span {
   position: relative;
 }
-.main-navigation .btn {
+nav.main-navigation .btn {
   margin-left: 10px;
   padding: 4px 12px;
   border-radius: 50px;
@@ -82,6 +82,18 @@ body {
   position: relative;
   background: #F15A29;
   display: block;
+}
+
+.parallax-section, .section4, .section3, .section2, .hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  position: sticky;
+  top: 0;
 }
 
 .hero {
@@ -118,7 +130,7 @@ body {
   position: relative;
   background: #fff;
   padding: 100px 0;
-  z-index: 4;
+  z-index: 2;
 }
 .section2 .container {
   width: 100%;
@@ -132,11 +144,13 @@ body {
 .section2 h2 {
   font-size: 40px;
   line-height: auto;
+  color: #000;
 }
 .section2 p {
   font-size: 20px;
   margin-bottom: 20px;
   line-height: 150%;
+  color: #000;
 }
 
 .section3 {
@@ -146,17 +160,74 @@ body {
   width: 100%;
   background-attachment: fixed;
   text-align: center;
-  z-index: 4;
+  z-index: 3;
 }
 .section3 h2 {
   font-size: 70px;
   font-weight: bold;
   color: #fff;
+  position: sticky;
 }
 .section3 p {
   color: rgb(242, 74, 32);
   font-size: 30px;
   line-height: 273%;
+}
+
+.section4 {
+  padding: 100px 0 0 0;
+  background: #fff;
+  z-index: 4;
+  height: auto;
+  flex-direction: column;
+}
+.section4 h3, .section4 p {
+  color: #000;
+}
+.section4 h3 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 65px;
+}
+.section4 p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  line-height: 150%;
+}
+.section4 .container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  margin-bottom: 100px;
+}
+.section4 img {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.section-5 {
+  background: #000;
+  padding: 150px 0;
+  width: 100%;
+}
+.section-5 h3 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #fff;
+}
+.section-5 p {
+  text-align: center;
+  font-size: 22px;
+  line-height: 160%;
+  color: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */
