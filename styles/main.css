@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+*, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.main-navigation {
+  background: rgba(0, 0, 0, 0.3137254902);
+  padding: 15px 25px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 906px;
+  width: 100%;
+  position: fixed;
+  margin-top: 20px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+.main-navigation .logo {
+  font-size: 28px;
+  color: #fff;
+  font-weight: 700;
+}
+.main-navigation .nav-links {
+  display: flex;
+  height: auto;
+  overflow: hidden;
+}
+.main-navigation .nav-links .nav-link {
+  padding: 4px 12px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 20px;
+  overflow: hidden;
+  position: relative;
+  background: none;
+  display: block;
+}
+.main-navigation .nav-links .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background: #f90099;
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+  border-radius: 50px;
+  transform: translate3d(0, 100%, 0);
+}
+.main-navigation .nav-links .nav-link:hover::before {
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+}
+.main-navigation .nav-links .nav-link span {
+  position: relative;
+}
+.main-navigation .btn {
+  margin-left: 10px;
+  padding: 4px 12px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 20px;
+  overflow: hidden;
+  position: relative;
+  background: #F15A29;
+  display: block;
+}
+
+.hero {
+  height: 100vh;
+  background: url("../img/bg-hero.png") center center/cover no-repeat;
+  width: 100%;
+  background-attachment: fixed;
+  z-index: 1;
+}
+.hero .gradient-bg {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 373px;
+  width: 100%;
+  background: #000000;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 75%, rgb(0, 0, 0) 100%);
+}
+.hero h1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  z-index: 3;
+}
+
+.section2 {
+  position: relative;
+  background: #fff;
+  padding: 100px 0;
+  z-index: 4;
+}
+.section2 .container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  gap: 100px;
+}
+.section2 h2 {
+  font-size: 40px;
+  line-height: auto;
+}
+.section2 p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  line-height: 150%;
+}
+
+.section3 {
+  position: relative;
+  padding: 100px 0;
+  background: url("../img/bg-section2.png") center center/cover no-repeat;
+  width: 100%;
+  background-attachment: fixed;
+  text-align: center;
+  z-index: 4;
+}
+.section3 h2 {
+  font-size: 70px;
+  font-weight: bold;
+  color: #fff;
+}
+.section3 p {
+  color: rgb(242, 74, 32);
+  font-size: 30px;
+  line-height: 273%;
+}
+
+/*# sourceMappingURL=main.css.map */

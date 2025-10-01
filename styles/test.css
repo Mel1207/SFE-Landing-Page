@@ -1,0 +1,29 @@
+*, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  height: 100vh;
+  background: url('../img/bg-hero.png') center center / cover no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1; /* stays behind */
+}
+
+.hero h1 {
+  position: sticky;   /* sticky makes it stay in place */
+  top: 40%;           /* keeps it centered when scrolling */
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+}
+
+.content {
+  position: relative;
+  background: white;
+  padding: 100px 20px;
+  z-index: 2; /* appears above hero */
+  height: 200vh;
+}
