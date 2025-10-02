@@ -60,13 +60,13 @@
   h2 
     font-size: 40px
     line-height: auto
-    color: $cBlack
+    color: $cBlack-1
 
   p
     font-size: 20px
     margin-bottom: 20px
     line-height: 150%
-    color: $cBlack
+    color: $cBlack-1
 
 .section3
   padding: 100px 0
@@ -101,7 +101,7 @@
   flex-direction: column
   
   h3, p
-    color: $cBlack
+    color: $cBlack-1
 
   h3 
     font-size: 40px
@@ -121,7 +121,6 @@
     display: grid
     grid-template-columns: 1fr 1fr
     gap: 100px
-    margin-bottom: 100px
 
   img 
     width: 100%
@@ -133,6 +132,7 @@
   background: $cBlack
   padding: 150px 0
   width: 100%
+  margin-top: 100px
 
   h3
     text-align: center
@@ -270,6 +270,17 @@
       width: 100%
       object-fit: fixed
 
+    .info-title 
+      font-size: 30px
+      color: $cWhite
+      font-weight: 600
+      margin-bottom: 15px
+
+    .info-text
+      font-size: 20px
+      font-weight: 500
+      color: $cBlack-1
+
 .latest-news 
   background: $cWhite
   padding: 150px 0
@@ -286,6 +297,7 @@
   h3
     font-weight: 600
     margin-bottom: 0
+    color: $cBlack-1
 
   .carousel-buttons
     display: flex 
