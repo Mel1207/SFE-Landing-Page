@@ -79,9 +79,6 @@ nav.main-navigation
   height: 100vh
   position: sticky
   top: 0
-  // display: flex
-  // align-items: center
-  // justify-content: center
 
 .hero 
   height: 100vh
@@ -238,6 +235,7 @@ nav.main-navigation
       padding: 40px 0
       cursor: pointer
       transition: all 0.3s ease
+      color: $cWhite
 
       .card-title
         font-weight: 500
@@ -338,12 +336,13 @@ nav.main-navigation
 
     .info-img 
       margin-bottom: 30px
-      height: 500px
+      height: auto
+      width: 100%
       object-fit: fixed
 
 .latest-news 
   background: $cWhite
-  padding: 200px 0
+  padding: 150px 0
 
   .news-title
     width: 100%
@@ -403,6 +402,34 @@ nav.main-navigation
       width: 100%
       border-radius: 0
 
+footer
+  padding: 150px 0
+  background: $cBlack
+  background: url('../img/bg-footer.png') center center / cover no-repeat
+  width: 100%
+  position: relative
+
+  &::before
+    content: ""
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    height: 100%
+    width: 100%
+    background: #1c1c1ccb
+
+  ul 
+    position: relative
+   
+  a 
+    color: $cWhite
+
+  .footer-container 
+    width: 100%
+    max-width: 1180px
+    padding: 0 20px
+    margin: 0 auto
 
 
 

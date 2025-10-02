@@ -244,6 +244,7 @@ nav.main-navigation .btn {
   padding: 40px 0;
   cursor: pointer;
   transition: all 0.3s ease;
+  color: #fff;
 }
 .section-5 .cards-list .card .card-title {
   font-weight: 500;
@@ -344,13 +345,14 @@ nav.main-navigation .btn {
 }
 .section-6 .info-panel .info-img {
   margin-bottom: 30px;
-  height: 500px;
+  height: auto;
+  width: 100%;
   object-fit: fixed;
 }
 
 .latest-news {
   background: #fff;
-  padding: 200px 0;
+  padding: 150px 0;
 }
 .latest-news .news-title {
   width: 100%;
@@ -408,6 +410,36 @@ nav.main-navigation .btn {
   height: 100%;
   width: 100%;
   border-radius: 0;
+}
+
+footer {
+  padding: 150px 0;
+  background: #000;
+  background: url("../img/bg-footer.png") center center/cover no-repeat;
+  width: 100%;
+  position: relative;
+}
+footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(28, 28, 28, 0.7960784314);
+}
+footer ul {
+  position: relative;
+}
+footer a {
+  color: #fff;
+}
+footer .footer-container {
+  width: 100%;
+  max-width: 1180px;
+  padding: 0 20px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=main.css.map */
