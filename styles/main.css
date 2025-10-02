@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
 a {
   text-decoration: none;
 }
@@ -7,14 +11,35 @@ ul, ol {
   list-style: none;
 }
 
+button, .btn {
+  font-family: "Ubuntu", sans-serif;
+  outline: none;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background: #F15A29;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.btn-sm {
+  font-size: 15px;
+  padding: 8px;
+}
+
 *, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  font-family: "Ubuntu", sans-serif;
 }
 
 nav.main-navigation {
@@ -463,14 +488,39 @@ footer .footer-container {
   justify-content: space-between;
   align-items: center;
 }
-.flex-container a {
+.flex-container a, .flex-container p {
   color: #707070;
+  font-size: 15px;
+}
+.flex-container a {
+  transition: all 0.3s ease;
+}
+.flex-container a:hover {
+  color: #f90099;
 }
 .flex-container ul {
   display: flex;
   gap: 30px;
   align-items: center;
   font-size: 15px;
+}
+.flex-container .btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.flex-container .btn img {
+  height: 8px;
+  width: 8px;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+.flex-container .btn:hover img {
+  transform: rotateX(180deg);
+}
+.flex-container .btn-outline:hover {
+  background: #f90099;
+  border: 1px solid transparent;
 }
 
 /*# sourceMappingURL=main.css.map */

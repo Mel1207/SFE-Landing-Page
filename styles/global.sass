@@ -3,9 +3,6 @@
   padding: 0
   box-sizing: border-box
 
-body 
-  font-family: "Ubuntu", sans-serif
-
 nav.main-navigation
   background: #00000050
   padding: 15px 25px
@@ -450,18 +447,41 @@ footer
   justify-content: space-between
   align-items: center
 
-  a 
+  a, p 
     color: $cGray
+    font-size: 15px
+  
+  a 
+    transition: all 0.3s ease
+    &:hover
+      color: $cPink
+
   ul 
     display: flex
     gap: 30px
     align-items: center
     font-size: 15px
 
+  .btn 
+    display: flex 
+    align-items: center
+    gap: 5px
 
+    img 
+      height: 8px 
+      width: 8px
+      transition: transform 0.3s ease
+      transform-origin: center
 
+    &:hover
 
+      img
+        transform: rotateX(180deg)
 
+  .btn-outline 
+    &:hover
+      background: $cPink
+      border: 1px solid transparent
 
 
 
