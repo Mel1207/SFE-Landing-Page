@@ -488,7 +488,7 @@ footer::before {
   top: 0;
   height: 100%;
   width: 100%;
-  background: rgba(28, 28, 28, 0.8784313725);
+  background: rgba(19, 19, 19, 0.9098039216);
 }
 footer a {
   color: #fff;
@@ -502,17 +502,15 @@ footer .footer-container {
 }
 footer .footer-head {
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 600;
   color: #F15A29;
+  margin-bottom: 20px;
 }
 
 .footer-right {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.footer-right .footer-head {
-  margin-bottom: 25px;
 }
 .footer-right input {
   margin-bottom: 20px;
@@ -529,6 +527,39 @@ footer .footer-head {
 .footer-right .btn:hover {
   background: #f90099;
   border: 1px solid transparent;
+}
+
+.footer-mid address {
+  font-size: 20px;
+  line-height: 25px;
+  color: #fff;
+  font-weight: regular;
+  font-style: normal;
+  margin-bottom: 10px;
+}
+.footer-mid .phone {
+  font-size: 20px;
+  color: #fff;
+  line-height: 25px;
+  font-weight: regular;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.footer-mid .icon-phone, .footer-mid .social-icon {
+  height: 18px;
+  width: 18px;
+}
+.footer-mid .footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.footer-mid .social-link {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .footer-left .flex {

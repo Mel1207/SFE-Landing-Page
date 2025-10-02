@@ -332,6 +332,7 @@
       width: 100%
       border-radius: 0
 
+// Footer main
 footer
   padding: 150px 0 0 0
   background: $cBlack
@@ -348,7 +349,7 @@ footer
     top: 0
     height: 100%
     width: 100%
-    background: #1c1c1ce0
+    background: #131313e8
 
   a 
     color: $cWhite
@@ -362,16 +363,14 @@ footer
 
   .footer-head
     font-size: 30px
-    font-weight: 700
+    font-weight: 600
     color: $cOrange
+    margin-bottom: 20px
 
 .footer-right
   display: flex 
   flex-direction: column
   align-items: center
-
-  .footer-head
-    margin-bottom: 25px
 
   input 
     margin-bottom: 20px
@@ -388,6 +387,39 @@ footer
     &:hover
       background: $cPink
       border: 1px solid transparent
+
+.footer-mid 
+  address
+    font-size: 20px
+    line-height: 25px
+    color: $cWhite
+    font-weight: regular
+    font-style: normal
+    margin-bottom: 10px
+
+  .phone 
+    font-size: 20px
+    color: $cWhite
+    line-height: 25px
+    font-weight: regular
+    display: flex 
+    gap: 10px
+    align-items: center
+    margin-bottom: 3rem
+
+  .icon-phone, .social-icon
+    height: 18px
+    width: 18px
+
+  .footer-socials
+    display: flex
+    align-items: center
+    gap: 20px
+
+  .social-link 
+    display: flex
+    gap: 10px
+    align-items: center
 
 .footer-left
   .flex 
