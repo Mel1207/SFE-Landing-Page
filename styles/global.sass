@@ -305,32 +305,76 @@
   .siema-content
     padding: 0 15px
 
-  .siema-item 
-    background: green
+  .siema-item
+    cursor: pointer 
     height: auto
     display: grid
     grid-template-columns: 1fr 1fr
 
-    h4, p
-      color: $cWhite
+    &:hover
+      .btn 
+        top: 50%
 
-    h4 
-      font-size: 20px
-      margin-bottom: 20px
+  .content-left 
+    padding: 30px
 
     p
       font-size: 16px
       line-height: 25px
       margin-bottom: 0
+      color: $cWhite
 
-  .content-left 
-    padding: 30px
+    .slide-title 
+      color: $cWhite
+      transition: all 0.3s ease
+      margin-bottom: 15px
 
   .content-right 
+    position: relative
+
     img 
       height: 100%
       width: 100%
       border-radius: 0
+
+    .btn 
+      position: absolute
+      top: 150%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 100%
+      max-width: 120px
+      font-weight: 500
+
+  .slide-1
+    background: #FE8963
+    transition: all 0.3s ease
+
+    &:hover
+      background: #B2401B
+
+      .slide-title 
+        color: #FFAE94
+
+  .slide-2
+    background: #3160B2
+    transition: all 0.3s ease
+
+    &:hover
+      background: #001842
+
+      .slide-title 
+        color: #3160B2
+
+  .slide-3
+    background: #DE2A35
+    transition: all 0.3s ease
+
+    &:hover
+      background: #4F0000
+
+      .slide-title 
+        color: #DE2A35
 
 // Footer main
 footer

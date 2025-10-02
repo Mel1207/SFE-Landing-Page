@@ -446,30 +446,74 @@ nav.main-navigation .btn {
   padding: 0 15px;
 }
 .latest-news .siema-item {
-  background: green;
+  cursor: pointer;
   height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.latest-news .siema-item h4, .latest-news .siema-item p {
-  color: #fff;
-}
-.latest-news .siema-item h4 {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-.latest-news .siema-item p {
-  font-size: 16px;
-  line-height: 25px;
-  margin-bottom: 0;
+.latest-news .siema-item:hover .btn {
+  top: 50%;
 }
 .latest-news .content-left {
   padding: 30px;
+}
+.latest-news .content-left p {
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: 0;
+  color: #fff;
+}
+.latest-news .content-left .slide-title {
+  color: #fff;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+.latest-news .content-right {
+  position: relative;
 }
 .latest-news .content-right img {
   height: 100%;
   width: 100%;
   border-radius: 0;
+}
+.latest-news .content-right .btn {
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 120px;
+  font-weight: 500;
+}
+.latest-news .slide-1 {
+  background: #FE8963;
+  transition: all 0.3s ease;
+}
+.latest-news .slide-1:hover {
+  background: #B2401B;
+}
+.latest-news .slide-1:hover .slide-title {
+  color: #FFAE94;
+}
+.latest-news .slide-2 {
+  background: #3160B2;
+  transition: all 0.3s ease;
+}
+.latest-news .slide-2:hover {
+  background: #001842;
+}
+.latest-news .slide-2:hover .slide-title {
+  color: #3160B2;
+}
+.latest-news .slide-3 {
+  background: #DE2A35;
+  transition: all 0.3s ease;
+}
+.latest-news .slide-3:hover {
+  background: #4F0000;
+}
+.latest-news .slide-3:hover .slide-title {
+  color: #DE2A35;
 }
 
 footer {
