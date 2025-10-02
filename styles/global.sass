@@ -79,6 +79,9 @@ nav.main-navigation
   height: 100vh
   position: sticky
   top: 0
+  // display: flex
+  // align-items: center
+  // justify-content: center
 
 .hero 
   height: 100vh
@@ -115,6 +118,8 @@ nav.main-navigation
   padding: 100px 0
   @extend .parallax-section
   z-index: 2
+  display: flex 
+  align-items: center
 
   .container
     width: 100%
@@ -144,6 +149,9 @@ nav.main-navigation
   text-align: center
   @extend .parallax-section
   z-index: 3
+  display: flex 
+  align-items: center
+  justify-content: center
   
   h2 
     font-size: 70px
@@ -346,13 +354,6 @@ nav.main-navigation
     margin: 0 auto 30px
     padding: 0 20px
 
-  .siema-content
-    padding: 0 15px
-
-  .siema-item 
-    background: green
-    height: 100px
-
   h3
     font-weight: 600
     margin-bottom: 0
@@ -372,7 +373,35 @@ nav.main-navigation
       height: 30px
       width: 30px
 
+  .siema-content
+    padding: 0 15px
 
+  .siema-item 
+    background: green
+    height: auto
+    display: grid
+    grid-template-columns: 1fr 1fr
+
+    h4, p
+      color: $cWhite
+
+    h4 
+      font-size: 20px
+      margin-bottom: 20px
+
+    p
+      font-size: 16px
+      line-height: 25px
+      margin-bottom: 0
+
+  .content-left 
+    padding: 30px
+
+  .content-right 
+    img 
+      height: 100%
+      width: 100%
+      border-radius: 0
 
 
 

@@ -125,6 +125,8 @@ nav.main-navigation .btn {
   background: #fff;
   padding: 100px 0;
   z-index: 2;
+  display: flex;
+  align-items: center;
 }
 .section2 .container {
   width: 100%;
@@ -154,6 +156,9 @@ nav.main-navigation .btn {
   background-attachment: fixed;
   text-align: center;
   z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .section3 h2 {
   font-size: 70px;
@@ -356,13 +361,6 @@ nav.main-navigation .btn {
   margin: 0 auto 30px;
   padding: 0 20px;
 }
-.latest-news .siema-content {
-  padding: 0 15px;
-}
-.latest-news .siema-item {
-  background: green;
-  height: 100px;
-}
 .latest-news h3 {
   font-weight: 600;
   margin-bottom: 0;
@@ -381,6 +379,35 @@ nav.main-navigation .btn {
 .latest-news .carousel-buttons img {
   height: 30px;
   width: 30px;
+}
+.latest-news .siema-content {
+  padding: 0 15px;
+}
+.latest-news .siema-item {
+  background: green;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.latest-news .siema-item h4, .latest-news .siema-item p {
+  color: #fff;
+}
+.latest-news .siema-item h4 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.latest-news .siema-item p {
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: 0;
+}
+.latest-news .content-left {
+  padding: 30px;
+}
+.latest-news .content-right img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
