@@ -1,3 +1,4 @@
+// buttons
 button, .btn 
   font-family: $font-primary
   outline: none 
@@ -18,3 +19,132 @@ button, .btn
 .btn-sm
   font-size: 15px
   padding: 8px
+
+.btn-md 
+  font-size: 18px
+  font-weight: 600
+  padding: 12px 0
+
+// inputs
+input 
+  height: 45px
+  width: 100%
+  border: 1px solid $cWhite
+  display: flex 
+  align-items: center
+  padding: 0 20px
+  border-radius: 100px
+  background: none
+  transition: all 0.3s ease
+  color: $cWhite
+  outline: none
+
+  &::placeholder
+    color: $cWhite
+    font-size: 15px
+    font-family: inherit
+
+  &:hover, &:focus, &:active, &:focus-within, &:focus-visible
+    border: 1px solid $cPink !important
+
+// main navigation
+nav.main-navigation
+  background: #00000050
+  padding: 15px 25px
+  border-radius: 100px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  max-width: 906px
+  width: 100%
+  position: fixed
+  margin-top: 20px
+  top: 0
+  left: 50%
+  transform: translateX(-50%)
+  z-index: 100
+
+  .logo 
+    font-size: 28px
+    color: $cWhite
+    font-weight: 700
+
+  .nav-links 
+    display: flex
+    height: auto
+    overflow: hidden
+
+    .nav-link 
+      padding: 4px 12px
+      border-radius: 50px
+      color: $cWhite
+      font-size: 20px
+      overflow: hidden
+      position: relative
+      background: none
+      display: block
+
+      &::before
+        content: ""
+        position: absolute
+        width: 100%
+        height: 100%
+        bottom: 0
+        left: 0
+        background: $cPink
+        transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1)
+        border-radius: 50px
+        transform: translate3d(0, 100%, 0)
+
+      &:hover
+        &::before
+          height: 100%
+          transform: translate3d(0, 0, 0)
+
+      span 
+        position: relative
+
+  .btn 
+    margin-left: 10px
+    padding: 4px 12px
+    border-radius: 50px
+    color: $cWhite
+    font-size: 20px
+    overflow: hidden
+    position: relative
+    background: #F15A29
+    display: block
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// end

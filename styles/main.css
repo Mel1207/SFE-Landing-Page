@@ -36,10 +36,32 @@ button, .btn {
   padding: 8px;
 }
 
-*, html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.btn-md {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 0;
+}
+
+input {
+  height: 45px;
+  width: 100%;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 100px;
+  background: none;
+  transition: all 0.3s ease;
+  color: #fff;
+  outline: none;
+}
+input::placeholder {
+  color: #fff;
+  font-size: 15px;
+  font-family: inherit;
+}
+input:hover, input:focus, input:active, input:focus-within, input:focus-visible {
+  border: 1px solid #f90099 !important;
 }
 
 nav.main-navigation {
@@ -107,6 +129,12 @@ nav.main-navigation .btn {
   position: relative;
   background: #F15A29;
   display: block;
+}
+
+*, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .parallax-section, .section4, .section3, .section2, .hero {
@@ -455,9 +483,6 @@ footer::before {
   width: 100%;
   background: rgba(28, 28, 28, 0.8784313725);
 }
-footer ul {
-  position: relative;
-}
 footer a {
   color: #fff;
 }
@@ -467,6 +492,36 @@ footer .footer-container {
   max-width: 1180px;
   padding: 0 20px;
   margin: 0 auto;
+}
+footer .footer-head {
+  font-size: 30px;
+  font-weight: 700;
+  color: #F15A29;
+}
+
+.footer-update {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-update .footer-head {
+  margin-bottom: 25px;
+}
+.footer-update input {
+  margin-bottom: 20px;
+}
+.footer-update .terms {
+  color: #fff;
+  font-size: 10px;
+  margin-bottom: 25px;
+}
+.footer-update .btn {
+  width: 100%;
+  max-width: 150px;
+}
+.footer-update .btn:hover {
+  background: #f90099;
+  border: 1px solid transparent;
 }
 
 .footer-row {
