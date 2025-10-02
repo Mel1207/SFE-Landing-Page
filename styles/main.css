@@ -22,6 +22,7 @@ button, .btn {
 
 .btn-primary {
   background: #F15A29;
+  color: #fff;
 }
 
 .btn-outline {
@@ -38,8 +39,14 @@ button, .btn {
 
 .btn-md {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   padding: 12px 0;
+}
+
+.btn-lg {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 15px 25px;
 }
 
 input {
@@ -499,29 +506,40 @@ footer .footer-head {
   color: #F15A29;
 }
 
-.footer-update {
+.footer-right {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.footer-update .footer-head {
+.footer-right .footer-head {
   margin-bottom: 25px;
 }
-.footer-update input {
+.footer-right input {
   margin-bottom: 20px;
 }
-.footer-update .terms {
+.footer-right .terms {
   color: #fff;
   font-size: 10px;
   margin-bottom: 25px;
 }
-.footer-update .btn {
+.footer-right .btn {
   width: 100%;
   max-width: 150px;
 }
-.footer-update .btn:hover {
+.footer-right .btn:hover {
   background: #f90099;
   border: 1px solid transparent;
+}
+
+.footer-left .flex {
+  display: flex;
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 3rem;
+}
+.footer-left .footer-links li {
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .footer-row {
