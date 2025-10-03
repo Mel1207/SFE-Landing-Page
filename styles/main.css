@@ -144,7 +144,7 @@ nav.main-navigation .btn {
   box-sizing: border-box;
 }
 
-.parallax-section, .section4, .section3, .section2, .hero {
+.parallax-section, .section-4, .section-3, .section-2, .hero {
   position: relative;
   height: 100vh;
   position: sticky;
@@ -181,14 +181,14 @@ nav.main-navigation .btn {
   z-index: 3;
 }
 
-.section2 {
+.section-2 {
   background: #fff;
   padding: 100px 0;
   z-index: 2;
   display: flex;
   align-items: center;
 }
-.section2 .container {
+.section-2 .container {
   width: 100%;
   max-width: 1180px;
   margin: 0 auto;
@@ -197,19 +197,19 @@ nav.main-navigation .btn {
   grid-template-columns: 40% 1fr;
   gap: 100px;
 }
-.section2 h2 {
+.section-2 h2 {
   font-size: 40px;
   line-height: auto;
   color: #1C1C1C;
 }
-.section2 p {
+.section-2 p {
   font-size: 20px;
   margin-bottom: 20px;
   line-height: 150%;
   color: #1C1C1C;
 }
 
-.section3 {
+.section-3 {
   padding: 100px 0;
   background: url("../img/bg-section2.png") center center/cover no-repeat;
   width: 100%;
@@ -220,39 +220,39 @@ nav.main-navigation .btn {
   align-items: center;
   justify-content: center;
 }
-.section3 h2 {
+.section-3 h2 {
   font-size: 70px;
   font-weight: bold;
   color: #fff;
   position: sticky;
 }
-.section3 p {
+.section-3 p {
   color: rgb(242, 74, 32);
   font-size: 30px;
   line-height: 273%;
 }
 
-.section4 {
+.section-4 {
   padding: 100px 0 0 0;
   background: #fff;
   z-index: 4;
   height: auto;
   flex-direction: column;
 }
-.section4 h3, .section4 p {
+.section-4 h3, .section-4 p {
   color: #1C1C1C;
 }
-.section4 h3 {
+.section-4 h3 {
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 65px;
 }
-.section4 .section-text {
+.section-4 .section-text {
   font-size: 20px;
   line-height: 150%;
   margin-bottom: 20px;
 }
-.section4 .container {
+.section-4 .container {
   width: 100%;
   max-width: 1180px;
   margin: 0 auto;
@@ -261,7 +261,7 @@ nav.main-navigation .btn {
   grid-template-columns: 1fr 1fr;
   gap: 100px;
 }
-.section4 img {
+.section-4 img {
   width: 100%;
   height: 390px;
   object-fit: cover;
@@ -681,6 +681,143 @@ footer .footer-head {
 .flex-container .btn-outline:hover {
   background: #f90099;
   border: 1px solid transparent;
+}
+
+@media screen and (max-width: 600px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+  .hero h1 br {
+    display: none;
+  }
+  nav.main-navigation {
+    max-width: calc(100% - 40px);
+  }
+  nav.main-navigation .logo {
+    font-size: 22px;
+  }
+  nav.main-navigation .nav-links {
+    display: none;
+  }
+  .section-2 {
+    padding: 70px 0;
+  }
+  .section-2 h2 {
+    font-size: 25px;
+    line-height: auto;
+  }
+  .section-2 h2 br {
+    display: none;
+  }
+  .section-2 p {
+    font-size: 1rem;
+  }
+  .section-2 .container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .section-3 {
+    padding: 70px 20px;
+  }
+  .section-3 h2 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .section-3 h2 br {
+    display: none;
+  }
+  .section-3 p {
+    font-size: 1rem;
+    line-height: auto;
+  }
+  .section-4 {
+    padding: 70px 0 0;
+  }
+  .section-4 .container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .section-4 h3 {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+  .section-4 h3 br {
+    display: none;
+  }
+  .section-4 .section-text {
+    font-size: 1rem;
+  }
+  .section-5 {
+    padding: 70px 20px;
+  }
+  .section-5 h3 {
+    font-size: 20px;
+  }
+  .section-5 p {
+    font-size: 1rem;
+  }
+  .section-5 p br {
+    display: none;
+  }
+  .section-5 .cards-list {
+    grid-template-columns: 1fr;
+  }
+  .section-6 {
+    padding: 50px 0 70px;
+  }
+  .section-6 .container {
+    justify-content: center;
+    align-items: center;
+  }
+  .section-6 .play-button {
+    display: block;
+    width: max-content;
+    margin: auto;
+  }
+  .section-6 .play-button svg, .section-6 .play-button img {
+    height: 150px;
+    width: 150px;
+  }
+  .section-6 .info-panel .info-title {
+    font-size: 20px;
+  }
+  .section-6 .info-panel .info-title br {
+    display: none;
+  }
+  .section-6 .info-panel .info-text {
+    font-size: 1rem;
+  }
+  .latest-news {
+    padding: 70px 0;
+  }
+  .latest-news .news-title h3 {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+  .latest-news .news-title .carousel-buttons {
+    gap: 10px;
+  }
+  footer {
+    padding: 70px 0 0;
+  }
+  footer .footer-row {
+    grid-template-columns: 1fr;
+  }
+  footer .footer-lower {
+    margin-top: 70px;
+  }
+  footer .flex-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    gap: 25px;
+  }
+  footer .flex-container ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 15px;
+    column-gap: 30px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
