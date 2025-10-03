@@ -684,9 +684,6 @@ footer .footer-head {
 }
 
 @media screen and (max-width: 600px) {
-  .hero {
-    background-size: auto;
-  }
   .hero h1 {
     width: calc(100% - 40px);
     display: block;
