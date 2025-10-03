@@ -39,6 +39,8 @@
     text-align: center
     margin: 0 auto
     z-index: 3
+    width: 100%
+    max-width: calc( 100% - 40px )
 
 .section-2 
   background: $cWhite
@@ -59,8 +61,8 @@
 
   h2 
     font-size: 40px
-    line-height: auto
     color: $cBlack-1
+    width: 100%
 
   p
     font-size: 20px
@@ -69,7 +71,7 @@
     color: $cBlack-1
 
 .section-3
-  padding: 100px 0
+  padding: 100px 20px
   background: url('../img/bg-section2.png') center center / cover no-repeat
   width: 100%
   background-attachment: fixed
@@ -85,10 +87,10 @@
     font-weight: bold
     color: $cWhite
     position: sticky
-    // margin-bottom: 
-    // top: 50%
+    width: 100%
+    
   p 
-    color: rgba(242, 74, 32, 1)
+    color: #f24a20
     font-size: 30px
     line-height: 273%
 
@@ -409,6 +411,10 @@ footer
 
   a 
     color: $cWhite
+    transition: all 0.3s ease
+
+    &:hover
+      color: $cPink
 
   .footer-container
     position: relative 

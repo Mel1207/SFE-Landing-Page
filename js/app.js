@@ -1,7 +1,7 @@
 const mySiema = new Siema({
   perPage: {
     768: 2,
-    1180: 3
+    1280: 3
   },
   onChange: updateActive,
 });

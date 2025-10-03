@@ -137,6 +137,18 @@ nav.main-navigation .btn {
   background: #F15A29;
   display: block;
 }
+nav.main-navigation button {
+  background: none;
+  outline: none;
+  border: none;
+  display: flex;
+  align-content: center;
+  display: none;
+}
+nav.main-navigation button .menu-icon {
+  height: 30px;
+  width: 30px;
+}
 
 *, html {
   margin: 0;
@@ -179,6 +191,8 @@ nav.main-navigation .btn {
   text-align: center;
   margin: 0 auto;
   z-index: 3;
+  width: 100%;
+  max-width: calc(100% - 40px);
 }
 
 .section-2 {
@@ -199,8 +213,8 @@ nav.main-navigation .btn {
 }
 .section-2 h2 {
   font-size: 40px;
-  line-height: auto;
   color: #1C1C1C;
+  width: 100%;
 }
 .section-2 p {
   font-size: 20px;
@@ -210,7 +224,7 @@ nav.main-navigation .btn {
 }
 
 .section-3 {
-  padding: 100px 0;
+  padding: 100px 20px;
   background: url("../img/bg-section2.png") center center/cover no-repeat;
   width: 100%;
   background-attachment: fixed;
@@ -225,9 +239,10 @@ nav.main-navigation .btn {
   font-weight: bold;
   color: #fff;
   position: sticky;
+  width: 100%;
 }
 .section-3 p {
-  color: rgb(242, 74, 32);
+  color: #f24a20;
   font-size: 30px;
   line-height: 273%;
 }
@@ -548,6 +563,10 @@ footer::before {
 }
 footer a {
   color: #fff;
+  transition: all 0.3s ease;
+}
+footer a:hover {
+  color: #f90099;
 }
 footer .footer-container {
   position: relative;
@@ -683,10 +702,50 @@ footer .footer-head {
   border: 1px solid transparent;
 }
 
+@media screen and (max-width: 1280px) {
+  .hero h1 {
+    font-size: 60px;
+  }
+  .section-2 .container {
+    gap: 70px;
+  }
+  .section-2 h2 br {
+    display: none;
+  }
+  .section-3 h2 {
+    font-size: 60px;
+  }
+  .section-3 p {
+    font-size: 25px;
+  }
+  .section-4 .container {
+    gap: 70px;
+  }
+  .section-4 h3 br {
+    display: none;
+  }
+  .footer-row {
+    gap: 50px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  footer .footer-row {
+    grid-template-columns: 1fr 1fr;
+  }
+  footer .footer-row .footer-right {
+    grid-column: 1/-1;
+  }
+}
+@media screen and (max-width: 800px) {
+  nav.main-navigation .nav-links {
+    display: none;
+  }
+  nav.main-navigation .mobile-menu {
+    display: block;
+  }
+}
 @media screen and (max-width: 600px) {
   .hero h1 {
-    width: calc(100% - 40px);
-    display: block;
     font-size: 30px;
   }
   .hero h1 br {
@@ -694,9 +753,10 @@ footer .footer-head {
   }
   nav.main-navigation {
     max-width: calc(100% - 40px);
+    padding: 15px 20px;
   }
   nav.main-navigation .logo {
-    font-size: 22px;
+    font-size: 16px;
   }
   nav.main-navigation .nav-links {
     display: none;
