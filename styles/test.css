@@ -4,26 +4,51 @@
   box-sizing: border-box;
 }
 
-.hero {
-  height: 100vh;
-  background: url('../img/bg-hero.png') center center / cover no-repeat;
-  background-attachment: fixed;
-  position: relative;
-  z-index: 1; /* stays behind */
+body {
+  color: #fff;
+  background: #1e1e1e;
 }
 
-.hero h1 {
-  position: sticky;   /* sticky makes it stay in place */
-  top: 40%;           /* keeps it centered when scrolling */
-  text-align: center;
-  font-size: 3rem;
-  color: white;
+.service-block {
+  display: grid;
+  grid-template-rows: 1fr 0fr;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #fff;
+  height: 140px;
+}
+.service-block .top-content {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.service-block .service-content-1,
+.service-block .service-content-2,
+.service-block .service-content-3 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.service-block:hover {
+  grid-template-rows: 0fr 1fr;
+  height: 200px;
+}
+.service-block:hover .top-content {
+  opacity: 0;
+  pointer-events: none;
+}
+.service-block:hover .service-content-1,
+.service-block:hover .service-content-2,
+.service-block:hover .service-content-3 {
+  opacity: 1;
 }
 
-.content {
-  position: relative;
-  background: white;
-  padding: 100px 20px;
-  z-index: 2; /* appears above hero */
-  height: 200vh;
-}
+/*# sourceMappingURL=test.css.map */

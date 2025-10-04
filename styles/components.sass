@@ -154,34 +154,6 @@ nav.main-navigation
   .service-menu
     width: 700px
 
-  .service-block 
-    position: relative
-    height: auto
-    width: 100%
-    display: flex
-    justify-content: space-between 
-    align-items: center
-    padding: 20px 0
-    border-top: 1px solid rgba($cWhite, .2)
-    cursor: pointer
-
-    .service-title
-      color: $cWhite
-      font-size: 50px
-      font-weight: 500
-      transition: all 0.3s ease
-    
-    &:nth-child(3)
-      border-bottom: 1px solid rgba($cWhite, .2)
-
-  &::before
-    content: ""
-    position: absolute
-    inset: 0
-    opacity: 0
-    transition: all 0.5s ease
-    pointer-events: none // don't block clicks
-
   &.show
     opacity: 1
     visibility: visible
@@ -201,22 +173,92 @@ nav.main-navigation
       background: linear-gradient(0deg, rgba(83, 145, 0, 1) 0%, rgba(60, 74, 41, 1) 100%)
       opacity: 1
 
-  .service-1 
-    &:hover
-      .service-title
-        color: $cPink
+  &::before
+    content: ""
+    position: absolute
+    inset: 0
+    opacity: 0
+    transition: all 0.5s ease
+    pointer-events: none // don't block clicks
 
-  .service-2
-    &:hover
-      .service-title 
-        color: $cOrange
+.service-block
+  position: relative
+  display: grid
+  grid-template-rows: 1fr 0fr   // top row open, bottom collapsed
+  transition: all .5s ease
+  overflow: hidden
+  width: 100%
+  padding: 20px
+  border-top: 1px solid rgba($cWhite, .2)
+  height: 120px
+  cursor: pointer
 
-  .service-3
-    &:hover
-      .service-title
-        color: $cGreen
+  &:nth-child(3)
+    border-bottom: 1px solid rgba($cWhite, .2)
 
+  .service-active 
+    height: 200px
+    width: 200px
 
+  .service-title
+    color: $cWhite
+    font-size: 50px
+    font-weight: 500
+
+  .top-content
+    opacity: 1
+    transition: opacity .3s ease
+    overflow: hidden
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  ul 
+    li 
+      color: $cWhite
+      font-size: 20px
+      margin-bottom: 15px
+
+  .service-content-1,
+  .service-content-2,
+  .service-content-3
+    display: flex 
+    align-items: flex-start
+    justify-content: space-between
+
+    overflow: hidden
+    opacity: 0
+    transition: opacity .5s ease
+
+  &:hover
+    grid-template-rows: 0fr 1fr   // top collapses, bottom expands
+    height: 270px
+
+    .top-content
+      opacity: 0
+      pointer-events: none
+
+    .service-content-1,
+    .service-content-2,
+    .service-content-3
+      opacity: 1
+
+  .service-title-active 
+    font-size: 50px
+    font-weight: 500
+    margin-bottom: 20px
+
+  .service-content-1
+    .service-title-active
+      color: $cPink
+
+  .service-content-2 
+    .service-title-active
+      color: $cOrange
+  
+  .service-content-3
+    .service-title-active
+      color: $cGreen
 
 
 
