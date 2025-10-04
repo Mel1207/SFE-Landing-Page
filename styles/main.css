@@ -151,8 +151,6 @@ nav.main-navigation button .menu-icon {
 }
 
 .services-container {
-  opacity: 0;
-  visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -227,10 +225,33 @@ nav.main-navigation button .menu-icon {
   justify-content: space-between;
   align-items: center;
 }
-.service-block ul li {
+.service-block .service-links li {
+  position: relative;
   color: #fff;
   font-size: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  padding-left: 0;
+  transition: padding-left 0.3s ease;
+}
+.service-block .service-links a {
+  position: absolute;
+  display: inline-block;
+  color: #fff;
+  left: 0;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+  transform: translateX(-120%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.service-block .service-links li:hover {
+  padding-left: 120px;
+}
+.service-block .service-links li:hover a {
+  opacity: 1;
+  transform: translateX(0);
 }
 .service-block .service-content-1,
 .service-block .service-content-2,
@@ -260,13 +281,13 @@ nav.main-navigation button .menu-icon {
   font-weight: 500;
   margin-bottom: 20px;
 }
-.service-block .service-content-1 .service-title-active {
+.service-block .service-content-1 a, .service-block .service-content-1 .service-title-active {
   color: #f90099;
 }
-.service-block .service-content-2 .service-title-active {
+.service-block .service-content-2 a, .service-block .service-content-2 .service-title-active {
   color: #F15A29;
 }
-.service-block .service-content-3 .service-title-active {
+.service-block .service-content-3 a, .service-block .service-content-3 .service-title-active {
   color: #8DC63F;
 }
 

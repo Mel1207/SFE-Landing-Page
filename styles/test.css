@@ -10,6 +10,7 @@ body {
 }
 
 .service-block {
+  position: relative;
   display: grid;
   grid-template-rows: 1fr 0fr;
   transition: all 0.5s ease;
@@ -48,6 +49,34 @@ body {
 .service-block:hover .service-content-1,
 .service-block:hover .service-content-2,
 .service-block:hover .service-content-3 {
+  opacity: 1;
+}
+
+.service-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.service-links li {
+  position: relative;
+  cursor: pointer;
+  transition: padding-left 0.4s ease;
+}
+.service-links li a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #f90099;
+  text-decoration: none;
+  transform: translateX(-120%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.service-links li:hover {
+  padding-left: 90px;
+}
+.service-links li:hover a {
+  transform: translateX(0);
   opacity: 1;
 }
 

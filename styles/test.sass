@@ -50,5 +50,34 @@ body
     .service-content-3
       opacity: 1
 
+.service-links
+  list-style: none
+  padding: 0
+  margin: 0
+
+  li
+    position: relative
+    cursor: pointer
+    transition: padding-left .4s ease   // smooth text shift
+
+    a
+      position: absolute
+      left: 0
+      top: 0
+      color: #f90099
+      text-decoration: none
+      transform: translateX(-120%)
+      opacity: 0
+      transition: transform .4s ease, opacity .4s ease
+
+    &:hover
+      padding-left: 90px   // same width as link
+      a
+        transform: translateX(0)
+        opacity: 1
+
+
+
+
 
 

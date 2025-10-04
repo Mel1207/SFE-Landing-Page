@@ -135,8 +135,8 @@ nav.main-navigation
       width: 30px
 
 .services-container
-  opacity: 0
-  visibility: hidden
+  // opacity: 0
+  // visibility: hidden
   position: fixed
   top: 0
   left: 0
@@ -213,11 +213,38 @@ nav.main-navigation
     justify-content: space-between
     align-items: center
 
-  ul 
+  .service-links
     li 
+      position: relative
       color: $cWhite
       font-size: 20px
-      margin-bottom: 15px
+      margin-bottom: 10px
+      overflow: hidden
+      cursor: pointer
+      padding-left: 0
+      transition: padding-left 0.3s ease
+
+    a 
+      position: absolute
+      display: inline-block
+      color: $cWhite
+      left: 0 
+      margin-right: 10px
+      transition: all 0.3s ease
+      transform: translateX(-120%)
+      opacity: 0
+      transition: all 0.3s ease
+
+    li 
+      &:hover
+        padding-left: 120px
+
+        a 
+          opacity: 1
+          transform: translateX(0)
+      
+
+
 
   .service-content-1,
   .service-content-2,
@@ -249,15 +276,15 @@ nav.main-navigation
     margin-bottom: 20px
 
   .service-content-1
-    .service-title-active
+    a, .service-title-active
       color: $cPink
-
+    
   .service-content-2 
-    .service-title-active
+    a, .service-title-active
       color: $cOrange
   
   .service-content-3
-    .service-title-active
+    a, .service-title-active
       color: $cGreen
 
 
