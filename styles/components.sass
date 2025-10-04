@@ -55,6 +55,7 @@ input
 
 // main navigation
 nav.main-navigation
+  // position: relative
   background: #00000050
   padding: 15px 25px
   border-radius: 100px
@@ -133,9 +134,47 @@ nav.main-navigation
       height: 30px
       width: 30px
 
+.services-container
+  opacity: 0
+  visibility: hidden
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  background: linear-gradient(0deg,rgba(60, 148, 180, 1) 0%, rgba(26, 64, 78, 1) 100%)
+  padding: 0 20px
+  z-index: 90
+  overflow-y: auto
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s
+  display: flex
+  align-items: center
+  justify-content: center
 
+  .service-menu
+    width: 700px
 
+  .service-block 
+    height: auto
+    width: 100%
+    display: flex
+    justify-content: space-between 
+    align-items: center
+    padding: 20px 0
+    border-top: 1px solid rgba($cWhite, .2)
 
+    .service-title
+      color: $cWhite
+      font-size: 50px
+      font-weight: 700
+    
+    &:nth-child(3)
+      border-bottom: 1px solid rgba($cWhite, .2)
+      
+
+.show 
+  opacity: 1
+  visibility: visible
 
 
 

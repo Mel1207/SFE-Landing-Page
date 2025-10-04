@@ -26,5 +26,18 @@ function updateActive() {
 
 updateActive();
 
+// hover trigger
+const services = document.querySelector('.has-services');
+const servicesContainer = document.querySelector('.services-container')
+
+// hover trigger
+services.addEventListener('mouseenter', () => {
+  servicesContainer.classList.add('show');
+})
+
+services.addEventListener('mouseleave', () => {
+  servicesContainer.classList.remove('show');
+})
+
 
 
