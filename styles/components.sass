@@ -135,8 +135,8 @@ nav.main-navigation
       width: 30px
 
 .services-container
-  opacity: 0
-  visibility: hidden
+  // opacity: 0
+  // visibility: hidden
   position: fixed
   top: 0
   left: 0
@@ -146,7 +146,7 @@ nav.main-navigation
   padding: 0 20px
   z-index: 90
   overflow-y: auto
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s
+  transition: all 0.5s ease
   display: flex
   align-items: center
   justify-content: center
@@ -162,6 +162,7 @@ nav.main-navigation
     align-items: center
     padding: 20px 0
     border-top: 1px solid rgba($cWhite, .2)
+    cursor: pointer
 
     .service-title
       color: $cWhite
@@ -170,12 +171,19 @@ nav.main-navigation
     
     &:nth-child(3)
       border-bottom: 1px solid rgba($cWhite, .2)
-      
 
-.show 
+.show
   opacity: 1
   visibility: visible
 
+// .color-1
+//   background: red
+
+// .color-2
+//   background: green
+
+// .color-3
+//   background: blue
 
 
 

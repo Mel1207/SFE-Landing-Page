@@ -28,7 +28,8 @@ updateActive();
 
 // hover trigger
 const services = document.querySelector('.has-services');
-const servicesContainer = document.querySelector('.services-container')
+const servicesContainer = document.querySelector('.services-container');
+const servicesItems = document.querySelectorAll('.service-block');
 
 // hover trigger
 services.addEventListener('mouseenter', () => {
@@ -44,10 +45,21 @@ servicesContainer.addEventListener('mouseenter', () => {
   servicesContainer.classList.add('show');
 });
 
-// Extra: hide when leaving container
 servicesContainer.addEventListener('mouseleave', () => {
-  servicesContainer.classList.remove('show');
+  servicesContainer.classList.remove('show', 'color-1', 'color-2', 'color-3');
 });
+
+servicesItems.forEach(service => {
+  service.addEventListener("mouseenter", () => {
+    if(service.classList.contains('service-1')) {
+      servicesContainer.classList.add('color-1')
+    } else if (service.classList.contains('service-2')) {
+      servicesContainer.classList.add('color-2')
+    } else if (service.classList.contains('service-3')) {
+      servicesContainer.classList.add('color-3')
+    }
+  })
+})
 
 
 

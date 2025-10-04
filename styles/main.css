@@ -151,8 +151,6 @@ nav.main-navigation button .menu-icon {
 }
 
 .services-container {
-  opacity: 0;
-  visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -162,7 +160,7 @@ nav.main-navigation button .menu-icon {
   padding: 0 20px;
   z-index: 90;
   overflow-y: auto;
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  transition: all 0.5s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -178,6 +176,7 @@ nav.main-navigation button .menu-icon {
   align-items: center;
   padding: 20px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }
 .services-container .service-block .service-title {
   color: #fff;
@@ -772,6 +771,13 @@ footer .footer-head {
   }
 }
 @media screen and (max-width: 1000px) {
+  .services-container .service-menu .service-title {
+    font-size: 30px;
+  }
+  .services-container .service-menu img {
+    height: 40px;
+    width: 40px;
+  }
   footer .footer-row {
     grid-template-columns: 1fr 1fr;
   }
