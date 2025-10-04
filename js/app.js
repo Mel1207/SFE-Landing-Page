@@ -1,6 +1,6 @@
 const mySiema = new Siema({
   perPage: {
-    768: 2,
+    850: 2,
     1280: 3
   },
   onChange: updateActive,

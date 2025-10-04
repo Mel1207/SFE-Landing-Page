@@ -79,7 +79,7 @@ nav.main-navigation {
   justify-content: space-between;
   align-items: center;
   max-width: 906px;
-  width: 100%;
+  width: calc(100% - 40px);
   position: fixed;
   margin-top: 20px;
   top: 0;
@@ -257,7 +257,7 @@ nav.main-navigation button .menu-icon {
 .section-4 h3, .section-4 p {
   color: #1C1C1C;
 }
-.section-4 h3 {
+.section-4 .section-4-title {
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 65px;
@@ -285,7 +285,7 @@ nav.main-navigation button .menu-icon {
 
 .section-5 {
   background: #000;
-  padding: 150px 0;
+  padding: 150px 20px;
   width: 100%;
   margin-top: 100px;
 }
@@ -735,24 +735,98 @@ footer .footer-head {
   footer .footer-row .footer-right {
     grid-column: 1/-1;
   }
+  footer .footer-row .footer-right input {
+    max-width: 500px;
+  }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   nav.main-navigation .nav-links {
     display: none;
   }
   nav.main-navigation .mobile-menu {
     display: block;
   }
+  .hero h1 {
+    font-size: 50px;
+  }
+  .hero h1 br {
+    display: none;
+  }
+  .section-2 .container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .section-2 h2 {
+    font-size: 30px;
+  }
+  .section-2 h2 br {
+    display: none;
+  }
+  .section-4 {
+    padding: 70px 0 0;
+  }
+  .section-4 .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .section-4 .section-4-title {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  .section-4 .section-4-title br {
+    display: none;
+  }
+  .section-4 img {
+    height: auto;
+  }
+  .section-5 {
+    margin-top: 70px;
+    padding: 70px 20px;
+  }
+  .section-6 {
+    padding: 70px 0 90px;
+  }
+  .section-6 .container {
+    justify-content: center;
+    align-items: center;
+  }
+  .section-6 .play-button {
+    display: block;
+    width: max-content;
+    margin: auto;
+  }
+  .section-6 .play-button svg, .section-6 .play-button img {
+    height: 200px;
+    width: 200px;
+  }
+  footer {
+    padding: 80px 0 0;
+  }
+  footer .footer-links {
+    flex: 1;
+  }
+  footer .footer-lower {
+    margin-top: 80px;
+  }
+  footer .flex-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    gap: 25px;
+  }
+  footer .flex-container ul {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 15px;
+    column-gap: 30px;
+  }
 }
 @media screen and (max-width: 600px) {
   .hero h1 {
     font-size: 30px;
   }
-  .hero h1 br {
-    display: none;
-  }
   nav.main-navigation {
-    max-width: calc(100% - 40px);
     padding: 15px 20px;
   }
   nav.main-navigation .logo {
@@ -785,9 +859,6 @@ footer .footer-head {
     font-size: 25px;
     line-height: 35px;
   }
-  .section-3 h2 br {
-    display: none;
-  }
   .section-3 p {
     font-size: 1rem;
     line-height: auto;
@@ -796,15 +867,11 @@ footer .footer-head {
     padding: 70px 0 0;
   }
   .section-4 .container {
-    grid-template-columns: 1fr;
     gap: 25px;
   }
   .section-4 h3 {
     font-size: 25px;
-    margin-bottom: 30px;
-  }
-  .section-4 h3 br {
-    display: none;
+    margin-bottom: 20px;
   }
   .section-4 .section-text {
     font-size: 1rem;
@@ -827,24 +894,12 @@ footer .footer-head {
   .section-6 {
     padding: 50px 0 70px;
   }
-  .section-6 .container {
-    justify-content: center;
-    align-items: center;
-  }
-  .section-6 .play-button {
-    display: block;
-    width: max-content;
-    margin: auto;
-  }
   .section-6 .play-button svg, .section-6 .play-button img {
     height: 150px;
     width: 150px;
   }
   .section-6 .info-panel .info-title {
     font-size: 20px;
-  }
-  .section-6 .info-panel .info-title br {
-    display: none;
   }
   .section-6 .info-panel .info-text {
     font-size: 1rem;
@@ -867,18 +922,6 @@ footer .footer-head {
   }
   footer .footer-lower {
     margin-top: 70px;
-  }
-  footer .flex-container {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: start;
-    gap: 25px;
-  }
-  footer .flex-container ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 15px;
-    column-gap: 30px;
   }
 }
 
