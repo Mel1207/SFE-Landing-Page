@@ -51,6 +51,7 @@ servicesContainer.addEventListener('mouseleave', () => {
 
 servicesItems.forEach(service => {
   service.addEventListener("mouseenter", () => {
+    servicesContainer.classList.remove('color-1', 'color-2', 'color-3');
     if(service.classList.contains('service-1')) {
       servicesContainer.classList.add('color-1')
     } else if (service.classList.contains('service-2')) {

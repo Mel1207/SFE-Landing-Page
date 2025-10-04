@@ -151,6 +151,8 @@ nav.main-navigation button .menu-icon {
 }
 
 .services-container {
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -169,6 +171,7 @@ nav.main-navigation button .menu-icon {
   width: 700px;
 }
 .services-container .service-block {
+  position: relative;
   height: auto;
   width: 100%;
   display: flex;
@@ -186,10 +189,29 @@ nav.main-navigation button .menu-icon {
 .services-container .service-block:nth-child(3) {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
-
-.show {
+.services-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+.services-container.show {
   opacity: 1;
   visibility: visible;
+}
+.services-container.color-1::before {
+  background: linear-gradient(0deg, rgb(214, 26, 142) 0%, rgb(65, 28, 51) 100%);
+  opacity: 1;
+}
+.services-container.color-2::before {
+  background: linear-gradient(0deg, rgb(192, 73, 34) 0%, rgb(90, 35, 16) 100%);
+  opacity: 1;
+}
+.services-container.color-3::before {
+  background: linear-gradient(0deg, rgb(83, 145, 0) 0%, rgb(60, 74, 41) 100%);
+  opacity: 1;
 }
 
 *, html {
