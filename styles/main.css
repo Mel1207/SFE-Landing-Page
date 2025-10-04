@@ -151,8 +151,6 @@ nav.main-navigation button .menu-icon {
 }
 
 .services-container {
-  opacity: 0;
-  visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -184,7 +182,7 @@ nav.main-navigation button .menu-icon {
 .services-container .service-block .service-title {
   color: #fff;
   font-size: 50px;
-  font-weight: 700;
+  font-weight: 500;
 }
 .services-container .service-block:nth-child(3) {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -212,6 +210,15 @@ nav.main-navigation button .menu-icon {
 .services-container.color-3::before {
   background: linear-gradient(0deg, rgb(83, 145, 0) 0%, rgb(60, 74, 41) 100%);
   opacity: 1;
+}
+.services-container .service-1:hover .service-title {
+  color: #f90099;
+}
+.services-container .service-2:hover .service-title {
+  color: #F15A29;
+}
+.services-container .service-3:hover .service-title {
+  color: #8DC63F;
 }
 
 *, html {

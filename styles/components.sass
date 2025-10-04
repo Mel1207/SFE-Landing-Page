@@ -135,8 +135,8 @@ nav.main-navigation
       width: 30px
 
 .services-container
-  opacity: 0
-  visibility: hidden
+  // opacity: 0
+  // visibility: hidden
   position: fixed
   top: 0
   left: 0
@@ -168,7 +168,7 @@ nav.main-navigation
     .service-title
       color: $cWhite
       font-size: 50px
-      font-weight: 700
+      font-weight: 500
     
     &:nth-child(3)
       border-bottom: 1px solid rgba($cWhite, .2)
@@ -185,30 +185,38 @@ nav.main-navigation
     opacity: 1
     visibility: visible
 
-  &.color-1::before
-    background: linear-gradient(0deg, rgba(214, 26, 142, 1) 0%, rgba(65, 28, 51, 1) 100%)
-    opacity: 1
+  &.color-1
+    &::before
+      background: linear-gradient(0deg, rgba(214, 26, 142, 1) 0%, rgba(65, 28, 51, 1) 100%)
+      opacity: 1
 
-  &.color-2::before
-    background: linear-gradient(0deg, rgba(192, 73, 34, 1) 0%, rgba(90, 35, 16, 1) 100%)
-    opacity: 1
+  &.color-2
+    &::before
+      background: linear-gradient(0deg, rgba(192, 73, 34, 1) 0%, rgba(90, 35, 16, 1) 100%)
+      opacity: 1
 
-  &.color-3::before
-    background: linear-gradient(0deg, rgba(83, 145, 0, 1) 0%, rgba(60, 74, 41, 1) 100%)
-    opacity: 1
+  &.color-3
+    &::before
+      background: linear-gradient(0deg, rgba(83, 145, 0, 1) 0%, rgba(60, 74, 41, 1) 100%)
+      opacity: 1
 
-// .show
-//   opacity: 1
-//   visibility: visible
+  .service-1 
+    &:hover
+      .service-title
+        color: $cPink
 
-// .color-1
-//   background: linear-gradient(0deg,rgba(214, 26, 142, 1) 0%, rgba(65, 28, 51, 1) 100%)
+  .service-2
+    &:hover
+      .service-title 
+        color: $cOrange
 
-// .color-2
-//   background: linear-gradient(0deg,rgba(192, 73, 34, 1) 0%, rgba(90, 35, 16, 1) 100%)
+  .service-3
+    &:hover
+      .service-title
+        color: $cGreen
 
-// .color-3
-//   background: linear-gradient(0deg,rgba(83, 145, 0, 1) 0%, rgba(60, 74, 41, 1) 100%)
+
+
 
 
 
