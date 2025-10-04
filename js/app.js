@@ -39,5 +39,15 @@ services.addEventListener('mouseleave', () => {
   servicesContainer.classList.remove('show');
 })
 
+// Extra: keep it open if mouse enters container
+servicesContainer.addEventListener('mouseenter', () => {
+  servicesContainer.classList.add('show');
+});
+
+// Extra: hide when leaving container
+servicesContainer.addEventListener('mouseleave', () => {
+  servicesContainer.classList.remove('show');
+});
+
 
 
