@@ -151,6 +151,8 @@ nav.main-navigation button .menu-icon {
 }
 
 .services-container {
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -183,6 +185,7 @@ nav.main-navigation button .menu-icon {
   color: #fff;
   font-size: 50px;
   font-weight: 500;
+  transition: all 0.3s ease;
 }
 .services-container .service-block:nth-child(3) {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
