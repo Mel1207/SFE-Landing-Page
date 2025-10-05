@@ -430,6 +430,44 @@ nav.main-navigation
       .bottom-content
         opacity: 1
 
+    .service-links-sm
+      li 
+        position: relative
+        padding-left: 0
+        transition: padding-left 0.3s ease
+
+        a 
+          position: absolute
+          transform: translateX(-100%)
+          left: 0 
+          margin-right: 10px
+          transition: all 0.3s ease
+          transform: translateX(-120%)
+          opacity: 0
+          transition: all 0.3s ease
+
+        &:hover
+          padding-left: 90px
+
+          a 
+            opacity: 1
+            transform: translateX(0)
+
+  .mservice-1
+    &:hover
+      .service-title, a 
+        color: $cPink
+
+  .mservice-2
+    &:hover
+      .service-title, a 
+        color: $cOrange
+    
+  .mservice-3
+    &:hover
+      .service-title, a 
+        color: $cGreen
+
 .mobile-active 
   transform: translateX(0)
 

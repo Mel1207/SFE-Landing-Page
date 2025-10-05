@@ -435,6 +435,37 @@ nav.main-navigation button .menu-icon {
 .mobile-navigation .service-block-sm:hover .bottom-content {
   opacity: 1;
 }
+.mobile-navigation .service-block-sm .service-links-sm li {
+  position: relative;
+  padding-left: 0;
+  transition: padding-left 0.3s ease;
+}
+.mobile-navigation .service-block-sm .service-links-sm li a {
+  position: absolute;
+  transform: translateX(-100%);
+  left: 0;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+  transform: translateX(-120%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.mobile-navigation .service-block-sm .service-links-sm li:hover {
+  padding-left: 90px;
+}
+.mobile-navigation .service-block-sm .service-links-sm li:hover a {
+  opacity: 1;
+  transform: translateX(0);
+}
+.mobile-navigation .mservice-1:hover .service-title, .mobile-navigation .mservice-1:hover a {
+  color: #f90099;
+}
+.mobile-navigation .mservice-2:hover .service-title, .mobile-navigation .mservice-2:hover a {
+  color: #F15A29;
+}
+.mobile-navigation .mservice-3:hover .service-title, .mobile-navigation .mservice-3:hover a {
+  color: #8DC63F;
+}
 
 .mobile-active {
   transform: translateX(0);
