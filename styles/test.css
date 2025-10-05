@@ -11,7 +11,6 @@ body {
 }
 
 .mobile-navigation {
-  transform: translateX(-100%);
   transition: all 0.3s ease;
   position: relative;
   height: 100vh;
@@ -80,10 +79,6 @@ body {
   margin-bottom: 20px;
 }
 
-.service-mobile {
-  margin-top: 20px;
-}
-
 .service-block-sm {
   position: relative;
   display: grid;
@@ -140,6 +135,22 @@ body {
 }
 .service-block-sm:hover .bottom-content {
   opacity: 1;
+}
+
+.service-mobile {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.service-link {
+  transition: all 0.3s ease;
+}
+.service-link:hover .service-mobile {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=test.css.map */

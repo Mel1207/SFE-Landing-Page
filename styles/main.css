@@ -364,8 +364,19 @@ nav.main-navigation button .menu-icon {
   color: #fff;
 }
 .mobile-navigation .service-mobile {
+  max-height: 0;
   width: 100%;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.mobile-navigation .service-link {
+  transition: all 0.3s ease;
+}
+.mobile-navigation .service-link:hover .service-mobile {
   margin-top: 20px;
+  max-height: 500px;
+  opacity: 1;
 }
 .mobile-navigation .service-block-sm {
   position: relative;
@@ -423,10 +434,6 @@ nav.main-navigation button .menu-icon {
 }
 .mobile-navigation .service-block-sm:hover .bottom-content {
   opacity: 1;
-}
-
-.bg-1 {
-  background: linear-gradient(0deg, rgb(214, 26, 142) 0%, rgb(65, 28, 51) 100%);
 }
 
 .mobile-active {

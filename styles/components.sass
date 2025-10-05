@@ -356,8 +356,20 @@ nav.main-navigation
         color: $cWhite
 
   .service-mobile 
+    max-height: 0
     width: 100%
-    margin-top: 20px
+    opacity: 0
+    overflow: hidden
+    transition: all 0.3s ease
+
+  .service-link 
+    transition: all 0.3s ease
+
+    &:hover
+      .service-mobile 
+        margin-top: 20px
+        max-height: 500px
+        opacity: 1
 
   .service-block-sm 
     position: relative
@@ -416,9 +428,6 @@ nav.main-navigation
 
       .bottom-content
         opacity: 1
-
-.bg-1
-  background: linear-gradient(0deg, rgba(214, 26, 142, 1) 0%, rgba(65, 28, 51, 1) 100%)
 
 .mobile-active 
   transform: translateX(0)
