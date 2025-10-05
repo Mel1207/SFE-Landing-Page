@@ -135,8 +135,8 @@ nav.main-navigation
       width: 30px
 
 .services-container
-  // opacity: 0
-  // visibility: hidden
+  opacity: 0
+  visibility: hidden
   position: fixed
   top: 0
   left: 0
@@ -243,9 +243,6 @@ nav.main-navigation
           opacity: 1
           transform: translateX(0)
       
-
-
-
   .service-content-1,
   .service-content-2,
   .service-content-3
@@ -287,7 +284,46 @@ nav.main-navigation
     a, .service-title-active
       color: $cGreen
 
+// mobile navigation
+.mobile-navigation
+  transform: translateX(-100%)
+  transition: all 0.3s ease
+  position: relative
+  height: 100vh
+  width: 100%
+  background: $cBlack
+  z-index: 100
+  position: fixed
+  padding: 20px
+  display: flex
+  align-items: center
 
+  .mobile-top
+    position: absolute
+    top: 0 
+    left: 0
+    width: 100%
+    padding: 20px
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    .mobile-logo
+      font-size: 20px
+      color: $cWhite
+      font-weight: 700
+  ul 
+    li 
+      color: $cWhite
+      margin-bottom: 20px
+      font-size: 20px
+
+      a 
+        font-family: $font-primary
+        color: $cWhite
+
+.mobile-active 
+  transform: translateX(0)
 
 
 

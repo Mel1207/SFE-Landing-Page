@@ -151,6 +151,8 @@ nav.main-navigation button .menu-icon {
 }
 
 .services-container {
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -289,6 +291,48 @@ nav.main-navigation button .menu-icon {
 }
 .service-block .service-content-3 a, .service-block .service-content-3 .service-title-active {
   color: #8DC63F;
+}
+
+.mobile-navigation {
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: #000;
+  z-index: 100;
+  position: fixed;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+.mobile-navigation .mobile-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mobile-navigation .mobile-top .mobile-logo {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+}
+.mobile-navigation ul li {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.mobile-navigation ul li a {
+  font-family: "Ubuntu", sans-serif;
+  color: #fff;
+}
+
+.mobile-active {
+  transform: translateX(0);
 }
 
 *, html {

@@ -30,6 +30,9 @@ updateActive();
 const services = document.querySelector('.has-services');
 const servicesContainer = document.querySelector('.services-container');
 const servicesItems = document.querySelectorAll('.service-block');
+const mobileMenu = document.querySelector('.mobile-menu');
+const mobileNav = document.querySelector('.mobile-navigation');
+const collapseMobileNav = document.querySelector('.close-navigation');
 
 // hover trigger
 services.addEventListener('mouseenter', () => {
@@ -60,6 +63,14 @@ servicesItems.forEach(service => {
       servicesContainer.classList.add('color-3')
     }
   })
+})
+
+mobileMenu.addEventListener('click', () => {
+  mobileNav.classList.add('mobile-active');
+})
+
+collapseMobileNav.addEventListener('click', () => {
+  mobileNav.classList.remove('mobile-active');
 })
 
 
