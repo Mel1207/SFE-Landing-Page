@@ -1,3 +1,14 @@
+@media screen and (max-width: 1500px) 
+  .latest-news
+    .siema-item 
+      flex-wrap: wrap
+
+      .content-left, .content-right
+        flex: 1 1 300px
+
+      .content-left
+        order: 2
+
 @media screen and (max-width: 1280px)
   .hero 
     h1 
@@ -26,6 +37,17 @@
       br 
         display: none
 
+  .latest-news
+    .siema-item 
+      .content-left, .content-right
+        flex: 1 1 220px
+
+      .content-left
+        order: 1
+
+      .content-right
+        order: 2
+
   .footer-row 
     gap: 50px
 
@@ -38,6 +60,14 @@
       img 
         height: 40px
         width: 40px
+
+  // .latest-news
+  //   .siema-item 
+  //     .content-left
+  //       order: 2
+
+  //     .content-right
+  //       order: 1
 
   footer
     .footer-row

@@ -800,14 +800,14 @@ nav.main-navigation button .menu-icon {
 .latest-news .siema-item {
   cursor: pointer;
   height: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
 }
 .latest-news .siema-item:hover .btn {
   top: 50%;
 }
 .latest-news .content-left {
   padding: 30px;
+  flex: 1;
 }
 .latest-news .content-left p {
   font-size: 16px;
@@ -822,6 +822,8 @@ nav.main-navigation button .menu-icon {
 }
 .latest-news .content-right {
   position: relative;
+  flex: 1;
+  overflow: hidden;
 }
 .latest-news .content-right img {
   height: 100%;
@@ -1027,6 +1029,17 @@ footer .footer-head {
   border: 1px solid transparent;
 }
 
+@media screen and (max-width: 1500px) {
+  .latest-news .siema-item {
+    flex-wrap: wrap;
+  }
+  .latest-news .siema-item .content-left, .latest-news .siema-item .content-right {
+    flex: 1 1 300px;
+  }
+  .latest-news .siema-item .content-left {
+    order: 2;
+  }
+}
 @media screen and (max-width: 1280px) {
   .hero h1 {
     font-size: 60px;
@@ -1048,6 +1061,15 @@ footer .footer-head {
   }
   .section-4 h3 br {
     display: none;
+  }
+  .latest-news .siema-item .content-left, .latest-news .siema-item .content-right {
+    flex: 1 1 220px;
+  }
+  .latest-news .siema-item .content-left {
+    order: 1;
+  }
+  .latest-news .siema-item .content-right {
+    order: 2;
   }
   .footer-row {
     gap: 50px;
@@ -1245,6 +1267,15 @@ footer .footer-head {
   }
   .latest-news .news-title .carousel-buttons {
     gap: 10px;
+  }
+  .latest-news .siema-item {
+    flex-direction: column;
+  }
+  .latest-news .siema-item .content-left {
+    order: 2;
+  }
+  .latest-news .siema-item .content-right {
+    order: 1;
   }
   footer {
     padding: 70px 0 0;

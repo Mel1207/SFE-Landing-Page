@@ -322,8 +322,7 @@
   .siema-item
     cursor: pointer 
     height: auto
-    display: grid
-    grid-template-columns: 1fr 1fr
+    display: flex
 
     &:hover
       .btn 
@@ -331,6 +330,7 @@
 
   .content-left 
     padding: 30px
+    flex: 1
 
     p
       font-size: 16px
@@ -343,8 +343,11 @@
       transition: all 0.3s ease
       margin-bottom: 15px
 
+
   .content-right 
     position: relative
+    flex: 1
+    overflow: hidden
 
     img 
       height: 100%
