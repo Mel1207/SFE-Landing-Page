@@ -25,7 +25,8 @@
 ## Requirements to Run the app
 - Browser - Visit Directly to the Live Link: https://sfe-landing-page.vercel.app/
 - File Explorer
-- Extract the files into your selected folder location
+- Download ZIP files into your local/machine
+- Extract Files to your selected location
 <br>
 <img width="431" height="343" alt="image" src="https://github.com/user-attachments/assets/3432c3d2-329e-46e5-a3c1-66c41bfb55f7" />
 <br>
