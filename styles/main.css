@@ -705,6 +705,17 @@ nav.main-navigation button .menu-icon {
   background: #ff4b1e;
   width: 100%;
   padding: 100px 0;
+  position: relative;
+}
+.section-6::before {
+  content: "";
+  height: 40vh;
+  width: 100%;
+  background: #000;
+  position: absolute;
+  top: -2px;
+  left: 0;
+  clip-path: polygon(0 0, 0 59%, 100% 0);
 }
 .section-6 svg {
   transform: rotate(-8deg);
@@ -739,6 +750,7 @@ nav.main-navigation button .menu-icon {
   display: grid;
   grid-template-columns: 130px 1fr;
   align-items: center;
+  position: relative;
 }
 .section-6 .info-panel {
   text-align: center;
@@ -1145,6 +1157,7 @@ footer .footer-head {
     align-items: center;
   }
   .section-6 .play-button {
+    order: 2;
     display: block;
     width: max-content;
     margin: auto;

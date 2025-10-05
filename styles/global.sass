@@ -231,6 +231,18 @@
   background: #ff4b1e
   width: 100%
   padding: 100px 0
+  position: relative
+
+  &::before
+    content: ""
+    height: 40vh
+    width: 100%
+    background: $cBlack
+    position: absolute
+    top: -2px
+    left: 0
+    // clip-path: polygon(0 0, 0 29%, 100% 0)
+    clip-path: polygon(0 0, 0 59%, 100% 0)
 
   svg 
     transform: rotate(-8deg)
@@ -262,6 +274,7 @@
     display: grid
     grid-template-columns: 130px 1fr
     align-items: center
+    position: relative
 
   .info-panel 
     text-align: center
