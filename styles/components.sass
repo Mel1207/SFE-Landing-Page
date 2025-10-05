@@ -302,9 +302,23 @@ nav.main-navigation
     content: ""
     position: absolute
     inset: 0
+    background: transparent
     opacity: 0
-    transition: all 0.5s ease
-    pointer-events: none // don't block clicks
+    transition: opacity 0.3s ease
+    z-index: -1
+    pointer-events: none
+
+  &.gradient-1::before
+    background: linear-gradient(0deg, rgba(214, 26, 142, 1) 0%, rgba(65, 28, 51, 1) 100%)
+    opacity: 1
+
+  &.gradient-2::before
+    background: linear-gradient(0deg, rgba(192, 73, 34, 1) 0%, rgba(90, 35, 16, 1) 100%)
+    opacity: 1
+
+  &.gradient-3::before
+    background: linear-gradient(0deg, rgba(83, 145, 0, 1) 0%, rgba(60, 74, 41, 1) 100%)
+    opacity: 1
 
   .mobile-top
     position: absolute
@@ -320,12 +334,22 @@ nav.main-navigation
       font-size: 20px
       color: $cWhite
       font-weight: 700
+
+    .close-navigation
+      border: none
+      background: none
+      height: 40px
+      display: flex 
+      align-items: center
+      justify-content: center
+
   .mobile-links
     width: 100%
+    font-size: 20px
+
     li 
       color: $cWhite
       margin-bottom: 20px
-      font-size: 20px
 
       a 
         font-family: $font-primary
@@ -336,19 +360,62 @@ nav.main-navigation
     margin-top: 20px
 
   .service-block-sm 
+    position: relative
+    display: grid
+    grid-template-rows: 1fr 0fr // top row open, bottom collapsed
+    transition: all .3s ease
+    overflow: hidden
     padding: 15px 0
     border-top: 1px solid rgba($cWhite, .2)
-    display: flex 
     width: 100%
-    justify-content: space-between
-    align-items: center
-
-    img 
-      height: 40px
-      width: 40px
+    cursor: pointer
+    height: 80px
 
     &:nth-child(3)
       border-bottom: 1px solid rgba($cWhite, .2)
+
+    .service-icon 
+      height: 40px
+      width: 40px
+
+    .top-content
+      display: flex
+      justify-content: space-between
+      align-items: center
+      opacity: 1
+      transition: opacity .3s ease
+      overflow: hidden
+
+    .bottom-content
+      display: flex 
+      align-items: flex-start
+      justify-content: space-between
+      overflow: hidden
+      opacity: 0
+      transition: opacity .5s ease
+
+      ul 
+        li
+          margin-bottom: 10px
+          font-size: 16px
+
+      .service-title
+        margin-bottom: 10px
+
+      img 
+        height: 100px
+        width: 100px
+
+    &:hover
+      grid-template-rows: 0fr 1fr
+      height: 170px
+
+      .top-content
+        opacity: 0
+        pointer-events: none
+
+      .bottom-content
+        opacity: 1
 
 .bg-1
   background: linear-gradient(0deg, rgba(214, 26, 142, 1) 0%, rgba(65, 28, 51, 1) 100%)

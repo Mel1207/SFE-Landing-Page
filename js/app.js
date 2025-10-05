@@ -31,10 +31,15 @@ const services = document.querySelector('.has-services');
 const servicesContainer = document.querySelector('.services-container');
 const servicesItems = document.querySelectorAll('.service-block');
 const mobileMenu = document.querySelector('.mobile-menu');
-const mobileNav = document.querySelector('.mobile-navigation');
 const collapseMobileNav = document.querySelector('.close-navigation');
 const mobileService = document.querySelector('.service-link');
-const mobileServiceContainer = document.querySelectorAll('.service-block-sm');
+const mobileNav = document.querySelector('.mobile-navigation');
+const mobileServices = [
+  { selector: ".mservice-1", class: "gradient-1" },
+  { selector: ".mservice-2", class: "gradient-2" },
+  { selector: ".mservice-3", class: "gradient-3" },
+];
+
 
 // hover trigger
 services.addEventListener('mouseenter', () => {
@@ -76,24 +81,18 @@ collapseMobileNav.addEventListener('click', () => {
   mobileNav.classList.remove('mobile-active');
 })
 
-mobileService.addEventListener('mouseenter', () => {
-  mobileNav.classList.add('bg-1')
-})
+mobileServices.forEach(service => {
+  const el = document.querySelector(service.selector);
+  if (el) {
+    el.addEventListener("mouseenter", () => {
+      mobileNav.classList.add(service.class);
+    });
+    el.addEventListener("mouseleave", () => {
+      mobileNav.classList.remove(service.class);
+    });
+  }
+});
 
-mobileService.addEventListener('mouseleave', () => {
-  mobileNav.classList.remove('bg-1')
-})
 
-// mobileService.addEventListener('mouseenter', () => {
-//   mobileServiceContainer.forEach(service => {
-//     service.addEventListener("mouseenter", () => {
-//       mobileNav.classList.remove('bg-1', 'bg-2', 'bg-3')
-
-//       if(service.classList.contains('bg-1')) {
-//         mobileNav.classList.add('')
-//       }
-//     })
-//   })
-// })
 
 
