@@ -1,3 +1,7 @@
+// carousel functions
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+
 const mySiema = new Siema({
   perPage: {
     900: 2,
@@ -5,8 +9,6 @@ const mySiema = new Siema({
   },
   onChange: updateActive,
 });
-const prev = document.querySelector('.prev');
-const next = document.querySelector('.next');
 
 prev.addEventListener('click', () => mySiema.prev());
 next.addEventListener('click', () => mySiema.next());
@@ -23,7 +25,6 @@ function updateActive() {
     slides[centerIndex].classList.add('active');
   }
 }
-
 updateActive();
 
 // hover trigger
@@ -41,8 +42,6 @@ const mobileServices = [
   { selector: ".mservice-3", class: "gradient-3" },
 ];
 
-
-// hover trigger
 services.addEventListener('mouseenter', () => {
   servicesContainer.classList.add('show');
 })
