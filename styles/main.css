@@ -368,6 +368,7 @@ nav.main-navigation button .menu-icon {
 .mobile-navigation .mobile-links li {
   color: #fff;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 .mobile-navigation .mobile-links li a {
   font-family: "Ubuntu", sans-serif;
