@@ -136,6 +136,10 @@ nav.main-navigation .btn {
   position: relative;
   background: #F15A29;
   display: block;
+  transition: 0.3s ease;
+}
+nav.main-navigation .btn:hover {
+  background: #f90099;
 }
 nav.main-navigation button {
   background: none;
@@ -303,8 +307,6 @@ nav.main-navigation button .menu-icon {
   z-index: 100;
   position: fixed;
   padding: 20px;
-  display: flex;
-  align-items: center;
 }
 .mobile-navigation::before {
   content: "";
@@ -332,6 +334,9 @@ nav.main-navigation button .menu-icon {
   background: linear-gradient(0deg, rgb(83, 145, 0) 0%, rgb(60, 74, 41) 100%);
   opacity: 1;
 }
+.mobile-navigation .btn-primary:hover {
+  background: #f90099;
+}
 .mobile-navigation .mobile-top {
   position: absolute;
   top: 0;
@@ -356,6 +361,7 @@ nav.main-navigation button .menu-icon {
   justify-content: center;
 }
 .mobile-navigation .mobile-links {
+  padding-top: 100px;
   width: 100%;
   font-size: 20px;
 }

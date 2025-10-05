@@ -119,8 +119,12 @@ nav.main-navigation
     font-size: 20px
     overflow: hidden
     position: relative
-    background: #F15A29
+    background: $cOrange
     display: block
+    transition: 0.3s ease
+
+    &:hover
+      background: $cPink
 
   button
     background: none
@@ -295,8 +299,6 @@ nav.main-navigation
   z-index: 100
   position: fixed
   padding: 20px
-  display: flex
-  align-items: center
 
   &::before
     content: ""
@@ -324,6 +326,10 @@ nav.main-navigation
     background: linear-gradient(0deg, rgba(83, 145, 0, 1) 0%, rgba(60, 74, 41, 1) 100%)
     opacity: 1
 
+  .btn-primary 
+    &:hover
+      background: $cPink
+
   .mobile-top
     position: absolute
     top: 0 
@@ -348,6 +354,7 @@ nav.main-navigation
       justify-content: center
 
   .mobile-links
+    padding-top: 100px
     width: 100%
     font-size: 20px
 
