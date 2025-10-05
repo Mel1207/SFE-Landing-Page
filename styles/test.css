@@ -32,6 +32,10 @@ body {
   z-index: -1;
   pointer-events: none;
 }
+.mobile-navigation.gradient-services::before {
+  background: linear-gradient(0deg, rgb(60, 148, 180) 0%, rgb(26, 64, 78) 100%);
+  opacity: 1;
+}
 .mobile-navigation.gradient-1::before {
   background: linear-gradient(0deg, rgb(214, 26, 142) 0%, rgb(65, 28, 51) 100%);
   opacity: 1;

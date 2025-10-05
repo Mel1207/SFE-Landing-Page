@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileNav = document.querySelector(".mobile-navigation");
   const openBtn = document.querySelector(".open-navigation"); // your hamburger button
   const closeBtn = document.querySelector(".close-navigation"); // close button inside nav
+  const serviceLink = document.querySelector(".service-link");
 
   // Open navigation
   openBtn.addEventListener("click", () => {
@@ -31,4 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
+
+  if (serviceLink) {
+    serviceLink.addEventListener("mouseenter", () => {
+      mobileNav.classList.add("gradient-services");
+    });
+
+    serviceLink.addEventListener("mouseleave", () => {
+      mobileNav.classList.remove("gradient-services");
+    });
+  }
 });

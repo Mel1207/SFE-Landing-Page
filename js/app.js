@@ -34,6 +34,7 @@ const mobileMenu = document.querySelector('.mobile-menu');
 const collapseMobileNav = document.querySelector('.close-navigation');
 const mobileService = document.querySelector('.service-link');
 const mobileNav = document.querySelector('.mobile-navigation');
+const serviceLink = document.querySelector(".service-link");
 const mobileServices = [
   { selector: ".mservice-1", class: "gradient-1" },
   { selector: ".mservice-2", class: "gradient-2" },
@@ -93,6 +94,15 @@ mobileServices.forEach(service => {
   }
 });
 
+if (serviceLink) {
+  serviceLink.addEventListener("mouseenter", () => {
+    mobileNav.classList.add("gradient-services");
+  });
+
+  serviceLink.addEventListener("mouseleave", () => {
+    mobileNav.classList.remove("gradient-services");
+  });
+}
 
 
 
