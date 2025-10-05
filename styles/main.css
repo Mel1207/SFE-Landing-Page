@@ -306,6 +306,14 @@ nav.main-navigation button .menu-icon {
   display: flex;
   align-items: center;
 }
+.mobile-navigation::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
 .mobile-navigation .mobile-top {
   position: absolute;
   top: 0;
@@ -321,14 +329,40 @@ nav.main-navigation button .menu-icon {
   color: #fff;
   font-weight: 700;
 }
-.mobile-navigation ul li {
+.mobile-navigation .mobile-links {
+  width: 100%;
+}
+.mobile-navigation .mobile-links li {
   color: #fff;
   margin-bottom: 20px;
   font-size: 20px;
 }
-.mobile-navigation ul li a {
+.mobile-navigation .mobile-links li a {
   font-family: "Ubuntu", sans-serif;
   color: #fff;
+}
+.mobile-navigation .service-mobile {
+  width: 100%;
+  margin-top: 20px;
+}
+.mobile-navigation .service-block-sm {
+  padding: 15px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.mobile-navigation .service-block-sm img {
+  height: 40px;
+  width: 40px;
+}
+.mobile-navigation .service-block-sm:nth-child(3) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bg-1 {
+  background: linear-gradient(0deg, rgb(214, 26, 142) 0%, rgb(65, 28, 51) 100%);
 }
 
 .mobile-active {

@@ -298,6 +298,14 @@ nav.main-navigation
   display: flex
   align-items: center
 
+  &::before
+    content: ""
+    position: absolute
+    inset: 0
+    opacity: 0
+    transition: all 0.5s ease
+    pointer-events: none // don't block clicks
+
   .mobile-top
     position: absolute
     top: 0 
@@ -312,7 +320,8 @@ nav.main-navigation
       font-size: 20px
       color: $cWhite
       font-weight: 700
-  ul 
+  .mobile-links
+    width: 100%
     li 
       color: $cWhite
       margin-bottom: 20px
@@ -321,6 +330,28 @@ nav.main-navigation
       a 
         font-family: $font-primary
         color: $cWhite
+
+  .service-mobile 
+    width: 100%
+    margin-top: 20px
+
+  .service-block-sm 
+    padding: 15px 0
+    border-top: 1px solid rgba($cWhite, .2)
+    display: flex 
+    width: 100%
+    justify-content: space-between
+    align-items: center
+
+    img 
+      height: 40px
+      width: 40px
+
+    &:nth-child(3)
+      border-bottom: 1px solid rgba($cWhite, .2)
+
+.bg-1
+  background: linear-gradient(0deg, rgba(214, 26, 142, 1) 0%, rgba(65, 28, 51, 1) 100%)
 
 .mobile-active 
   transform: translateX(0)

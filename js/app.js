@@ -33,6 +33,8 @@ const servicesItems = document.querySelectorAll('.service-block');
 const mobileMenu = document.querySelector('.mobile-menu');
 const mobileNav = document.querySelector('.mobile-navigation');
 const collapseMobileNav = document.querySelector('.close-navigation');
+const mobileService = document.querySelector('.service-link');
+const mobileServiceContainer = document.querySelectorAll('.service-block-sm');
 
 // hover trigger
 services.addEventListener('mouseenter', () => {
@@ -65,6 +67,7 @@ servicesItems.forEach(service => {
   })
 })
 
+// MOBILE FUNCTIONS
 mobileMenu.addEventListener('click', () => {
   mobileNav.classList.add('mobile-active');
 })
@@ -73,5 +76,24 @@ collapseMobileNav.addEventListener('click', () => {
   mobileNav.classList.remove('mobile-active');
 })
 
+mobileService.addEventListener('mouseenter', () => {
+  mobileNav.classList.add('bg-1')
+})
+
+mobileService.addEventListener('mouseleave', () => {
+  mobileNav.classList.remove('bg-1')
+})
+
+// mobileService.addEventListener('mouseenter', () => {
+//   mobileServiceContainer.forEach(service => {
+//     service.addEventListener("mouseenter", () => {
+//       mobileNav.classList.remove('bg-1', 'bg-2', 'bg-3')
+
+//       if(service.classList.contains('bg-1')) {
+//         mobileNav.classList.add('')
+//       }
+//     })
+//   })
+// })
 
 
